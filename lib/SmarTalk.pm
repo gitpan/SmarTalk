@@ -12,7 +12,7 @@ require Exporter;
     our %EXPORT_TAGS = ('all' => [ qw(new setServer serverUp setClient clientUp)]);
     our @EXPORT_OK = (@{$EXPORT_TAGS{'all'}});
     our @EXPORT = qw();
-    our $VERSION = '0.01';
+    our $VERSION = '0.06';
         
     #variable declaration
     my $tunnel;
