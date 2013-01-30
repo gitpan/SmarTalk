@@ -1,4 +1,4 @@
-SmarTalk version 0.01
+SmarTalk version 0.09
 =====================
 
 INSTALLATION
@@ -9,7 +9,6 @@ To install this module type the following:
    make
    make test
    make install
-
 
 USAGE
 

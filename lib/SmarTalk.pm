@@ -12,7 +12,7 @@ our @ISA = qw(Exporter);
 our %EXPORT_TAGS = ('all' => [ qw(new setServer serverUp setClient clientUp)]);
 our @EXPORT_OK = (@{$EXPORT_TAGS{'all'}});
 our @EXPORT = qw();
-our $VERSION = '0.07';
+our $VERSION = '0.09';
         
 #declaration
 my ($tunnel,$settingServer,$settingClient,$pcremoto,
