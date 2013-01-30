@@ -12,7 +12,7 @@ our @ISA = qw(Exporter);
 our %EXPORT_TAGS = ('all' => [ qw(new setServer serverUp setClient clientUp)]);
 our @EXPORT_OK = (@{$EXPORT_TAGS{'all'}});
 our @EXPORT = qw();
-our $VERSION = '0.09';
+our $VERSION = '0.10';
         
 #declaration
 my ($tunnel,$settingServer,$settingClient,$pcremoto,
@@ -129,32 +129,47 @@ SmarTalk - Simple Client-Server Chat
 
 #Server example
 use strict;
+
 use warnings;
+
 use SmarTalk;
 
 my (%newUser,%setting,$server);
+
 my @country = qw - ENG IT -;
 
 %newUser = (username => "Max", country => "$country[1]");
+
 $server = SmarTalk->new(\%newUser);
+
 %setting = (porta => "9995");
+
 $server->setServer(\%setting);
+
 $server->serverUp();
 
 ############***##############
 
 #Client example
+
 use strict;
+
 use warnings;
+
 use SmarTalk;
 
 my (%newUser,%setting,$client);
+
 my @country = qw - GB IT -;
 
 %newUser = (username => "John", country => $country[1]);
+
 $client = SmarTalk->new(\%newUser);
+
 %setting = (server => 'localhost', porta => 9995);
+
 $client->setClient(\%setting);
+
 $client->clientUp();
 
 
